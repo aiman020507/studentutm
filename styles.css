@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+
+}
+
+.text {
+    text-align: center;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+section .image {
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+section .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    z-index: 1;
+    mix-blend-mode: screen;
+    opacity: 100%;
+}
+
+section .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+section .content .form {
+    width: 50%;
+}
+
+section .content .form h2 {
+    color: #001c2a;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 5px solid blue;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section .content .form .input {
+    margin-bottom: 20px;
+}
+
+section .content .form .input span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #001c2a;
+    display: inline-block;
+    letter-spacing: 1px;
+
+}
+
+section .content .form .input input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #001c2a;
+    letter-spacing: 1px;
+    color: #001c2a;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.login-with-google-btn:active {
+    transform: scale(0.95);
+    transition: 0.2s;
+
+}
+
+.login-with-google-btn {
+    margin-top: 10px;
+    width: 100%;
+    max-height: 40px;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    background: linear-gradient(90deg, #3e73a4, #307fcb);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.login-with-google-btn:hover {
+    background: linear-gradient(90deg, #3e73a4, #307fcb, #f5a921, #e35240) !important;
+
+}
+
+
+#submit-button {
+    background: linear-gradient(90deg, #004080, #0080ff);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    transition: background-position 0.3s ease-in-out;
+}
+
+#submit-button:hover {
+    background-position: 100% 0;
+}
+
+#submit-button:active {
+    background: linear-gradient(90deg, #de5900, #ff8040);
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+
+.remember-me {
+    margin-bottom: 20px;
+    color: #001c2a;
+    font-weight: 400;
+}
+
+.input p {
+    color: #001c2a;
+}
+
+.input p a {
+    color: blue;
+}
+
+.form h3 {
+    color: #001c2a;
+    text-align: center;
+    margin: 80px 0 10px;
+    font-weight: 400;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background: #001c2a;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+.social li img {
+    width: 30px;
+    height: 30px;
+    transform: scale(0.5);
+    filter: invert(1);
+
+}
+
+.social li:active {
+    background: #ff6600;
+    transform: scale(0.9);
+}
+
+
+
+#profileImage {
+    border: 2px blue solid;
+}
+
+@media(max-width:768px) {
+
+    #profileImage {
+        border: 2px white solid;
+    }
+
+    section .image {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    section .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        z-index: 1;
+    }
+
+    section .content .form {
+        width: 100%;
+    }
+
+    .form {
+        background: rgba(255, 255, 255, 0.694);
+    }
+
+    .form {
+        padding: 40px;
+    }
+
+    form h3 {
+        color: #001c2a;
+        text-align: center;
+        margin: 30px 0 1px;
+        font-weight: 400;
+    }
+}
+
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.social li {
+    animation: floatAnimation 2s infinite;
+}
+
+.social li:hover,
+.social li:active {
+    animation: none;
+    /* Disable animation on hover or click */
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ff); /* Soft gradient background */
+    color: #333; /* Default text color */
+}
+
+.text {
+    text-align: center;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+section .image {
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+section .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue overlay */
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+section .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+section .content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    width: 60%; /* Adjusted width */
+    height: 100%;
+    padding: 20px; /* Added padding */
+}
+
+section .content .dashboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between user info and logout button */
+    align-items: center;
+    margin-bottom: 20px; /* Space below dashboard */
+}
+
+section .content .dashboard button {
+    background: linear-gradient(90deg, #ff6600, #ff9900);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Added transform for scale effect */
+}
+
+section .content .dashboard button:hover {
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+section .content .quotes,
+section .content .leaderboard,
+section .content .academic-calendar,
+section .content .todo {
+    background: linear-gradient(135deg, #ffcc00, #ff6699); /* Colorful gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for a more dynamic look */
+    padding: 20px;
+    margin: 10px 0; /* Space between sections */
+    width: 100%; /* Full width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+section .content .quotes:hover,
+section .content .leaderboard:hover,
+section .content .academic-calendar:hover,
+section .content .todo:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+section .content h3 {
+    color: #001c2a;
+    margin-bottom: 10px;
+}
+
+section .content p {
+    color: #555; /* Darker text for better readability */
+}
+
+#quoteText {
+    font-style: italic; /* Italic style for quotes */
+    color: #ff6600; /* Quote color */
+    text-align: center;
+}
+
+#leaderboardList {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+#leaderboardList li {
+    padding: 5px 0; /* Space between leaderboard items */
+    border-bottom: 1px solid #ddd; /* Divider line */
+}
+
+#leaderboardList li:last-child {
+    border-bottom: none; /* Remove last border */
+}
+
+.academic-calendar a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.academic-calendar a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.todo {
+    min-height: 100px; /* Minimum height for to-do list */
+}
+
+@media(max-width:768px) {
+    section .image {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    section .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    section .content .dashboard {
+        flex-direction: column; /* Stack dashboard elements */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    section .content .dashboard button {
+        margin-top: 10px; /* Space above button */
+    }
+}
+
+@keyframes floatAnimation {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.social li {
+    animation: floatAnimation 2s infinite;
+}
+
+.social li:hover,
+.social li:active {
+    animation: none; /* Disable animation on hover or click */
+}
+
+#profileImage {
+    border: 2px blue solid;
+}
+
+@media(max-width:768px) {
+    #profileImage {
+        border: 2px white solid;
+    }
+}
